@@ -55,8 +55,8 @@ jobs:
           # Use repository secret directly. This repo historically stored BACKEND_TOML as a GitHub Actions secret.
           # Keep this form because env mapping can be empty when secret context is unavailable for this fork.
           cat > wrangler.toml <<'WRANGLER_TOML_EOF'
-${{ secrets.BACKEND_TOML }}
-WRANGLER_TOML_EOF
+          ${{ secrets.BACKEND_TOML }}
+          WRANGLER_TOML_EOF
           
           pnpm install --no-frozen-lockfile
 
